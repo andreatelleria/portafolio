@@ -3,7 +3,7 @@
     $(".navigation ul li a[href^='#']").on('click', function(e) {
 	    
 	    target = this.hash;
-       // prevent default anchor click behavior
+       // prevenir click behavior
        e.preventDefault();
 
        // animate
@@ -11,8 +11,6 @@
            scrollTop: $(this.hash).offset().top - 10 
          }, 300, function(){
    
-           // when done, add hash to url
-           // (default click behaviour)
            window.location.hash = target;
          });
 
